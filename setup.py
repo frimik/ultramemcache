@@ -56,6 +56,7 @@ module1 = Extension('umemcache',
                 include_dirs = ['./lib/'],
                 library_dirs = [],
                 libraries=libs,
+                extra_compile_args=['-Wno-format-security'],
                 define_macros=[('WIN32_LEAN_AND_MEAN', None)])
 
 f = open('README.rst')
